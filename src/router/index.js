@@ -2,7 +2,7 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-05-11 16:10:17
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-05-11 16:32:25
+ * @LastEditTime: 2021-05-11 17:17:21
  * @Description:  路由
  */
 
@@ -15,7 +15,7 @@ const routes = [
     component: () => import('../views/home/index.vue')
   },
   {
-    path: '/setting',
+    path: '/article',
     name: 'Article',
     component: () => import('../views/article/index.vue')
   }

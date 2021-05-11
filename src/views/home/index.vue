@@ -2,15 +2,15 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-05-11 16:08:22
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-05-11 16:13:42
+ * @LastEditTime: 2021-05-11 17:16:35
  * @Description:  首页
 -->
 
 <template>
-  <div>首页</div>
+  <div>首页<router-link to="/article">文章</router-link></div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 
 export default defineComponent({
