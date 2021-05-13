@@ -1,16 +1,16 @@
 <!--
  * @Author: 616749285@qq.com
- * @Date: 2021-05-12 09:59:06
+ * @Date: 2021-05-12 22:41:00
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-05-12 09:59:16
- * @Description:  登录
+ * @LastEditTime: 2021-05-12 22:44:52
+ * @Description:  面包屑导航栏
 -->
 
 <template>
-  <div>登录</div>
+  <div>面包屑导航栏</div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
 
 }
