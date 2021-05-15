@@ -2,7 +2,7 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-05-11 16:08:22
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-05-15 20:33:39
+ * @LastEditTime: 2021-05-15 21:00:22
  * @Description:  首页
 -->
 
@@ -55,6 +55,7 @@
         </a-breadcrumb>
         <div :style="{ padding: '24px', background: '#fff', minHeight: '360px' }">
           Bill is a cat.
+          <editor />
         </div>
       </a-layout-content>
       <a-layout-footer style="text-align: center">
@@ -65,6 +66,7 @@
 </template>
 
 <script lang="ts">
+import Editor from '/@/components/editor/index'
 import { defineComponent, ref } from 'vue'
 import {
   PieChartOutlined,
@@ -81,6 +83,7 @@ export default defineComponent({
     UserOutlined,
     TeamOutlined,
     FileOutlined,
+    Editor
   },
   data() {
     return {
