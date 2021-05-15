@@ -10,7 +10,7 @@
   <div>文章<router-link to="/">首页</router-link></div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({

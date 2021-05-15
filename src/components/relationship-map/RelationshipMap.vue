@@ -10,7 +10,7 @@
   <div>关系图组件</div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
 
 }
