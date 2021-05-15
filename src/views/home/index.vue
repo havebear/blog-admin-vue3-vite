@@ -2,7 +2,7 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-05-11 16:08:22
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-05-12 21:26:58
+ * @LastEditTime: 2021-05-15 20:30:07
  * @Description:  首页
 -->
 
@@ -30,7 +30,7 @@ export default defineComponent({
           title: 'A',
           children: [
             {
-              id: 'a-1',
+              id: 'a-1', 
               title: 'A-1'
             },
             {
