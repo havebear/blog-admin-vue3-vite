@@ -2,7 +2,7 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-05-11 16:08:22
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-05-15 21:00:22
+ * @LastEditTime: 2021-06-08 16:51:12
  * @Description:  首页
 -->
 
@@ -66,7 +66,7 @@
 </template>
 
 <script lang="ts">
-import Editor from '/@/components/editor/index'
+// import Editor from '/@/components/editor/index.vue'
 import { defineComponent, ref } from 'vue'
 import {
   PieChartOutlined,
@@ -83,7 +83,7 @@ export default defineComponent({
     UserOutlined,
     TeamOutlined,
     FileOutlined,
-    Editor
+    // Editor
   },
   data() {
     return {
