@@ -2,13 +2,13 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-06-09 16:10:54
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-09 17:53:00
+ * @LastEditTime: 2021-06-10 14:42:21
  * @Description:  tabs
 -->
 
 <template>
   <div class="layout-tabs">
-    <a-tabs type="card" v-model:activeKey="activeKey">
+    <a-tabs v-model:activeKey="activeKey" type="editable-card" size="small" hide-add :tab-bar-style="{ padding: '5px 0', marginBottom: 0, background: '#fff' }">
       <a-tab-pane v-for="item in 30" :key="item" :tab="`标签 ${item}`">
         <template #tab>TEST</template>
       </a-tab-pane>
@@ -32,6 +32,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="less">
 
 </style>
