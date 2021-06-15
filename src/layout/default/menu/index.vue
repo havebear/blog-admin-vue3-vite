@@ -2,12 +2,12 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-06-09 16:09:26
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-09 17:36:11
+ * @LastEditTime: 2021-06-15 13:40:38
  * @Description:  菜单
 -->
 
 <template>
-  <a-layout-sider>
+  <a-layout-sider v-model:collapsed="collapsed" collapsible :trigger="null">
     <a-menu theme="dark" v-model:selectedKeys="selectedKeys" mode="inline">
         <a-menu-item key="1">
           <pie-chart-outlined />
