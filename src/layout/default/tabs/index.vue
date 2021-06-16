@@ -2,7 +2,7 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-06-09 16:10:54
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-10 14:42:21
+ * @LastEditTime: 2021-06-16 17:48:03
  * @Description:  tabs
 -->
 
@@ -13,7 +13,9 @@
         <template #tab>TEST</template>
       </a-tab-pane>
       <template #tabBarExtraContent>
-        <span>刷新</span>
+        <span>
+          <sync-outlined spin />
+        </span>
         <span>下拉菜单</span>
       </template>
     </a-tabs>
@@ -21,9 +23,12 @@
 </template>
 
 <script lang="ts">
+import { SyncOutlined } from '@ant-design/icons-vue'
 
 export default {
-  components: {},
+  components: {
+    SyncOutlined
+  },
   data () {
     return {
       activeKey: 1

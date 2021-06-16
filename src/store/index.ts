@@ -1,27 +1,18 @@
 /*
  * @Author: 616749285@qq.com
- * @Date: 2021-05-11 16:16:23
+ * @Date: 2021-06-16 15:43:20
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-15 15:39:36
- * @Description:  store
+ * @LastEditTime: 2021-06-16 15:43:20
+ * @Description:  
  */
 
-import { createStore } from 'vuex'
 
-export default createStore({
-  state() {
-    return {
-      count: 0
-    }
-  },
-  mutations: {
-    increment(state) {
-      state.count++
-    },
-  },
-  actions: {
-    increment(context) {
-      context.commit('increment')
-    }
-  }
-})
+import type { App } from 'vue'
+import { createPinia } from 'pinia'
+const store = createPinia()
+
+export function setupStore(app: App<Element>) {
+  app.use(store)
+}
+
+export { store }

@@ -2,12 +2,12 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-06-09 16:09:26
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-15 13:40:38
+ * @LastEditTime: 2021-06-16 16:58:30
  * @Description:  菜单
 -->
 
 <template>
-  <a-layout-sider v-model:collapsed="collapsed" collapsible :trigger="null">
+  <a-layout-sider :collapsed="collapsed" collapsible :trigger="null">
     <a-menu theme="dark" v-model:selectedKeys="selectedKeys" mode="inline">
         <a-menu-item key="1">
           <pie-chart-outlined />
@@ -55,6 +55,8 @@ import {
   TeamOutlined,
   FileOutlined,
 } from '@ant-design/icons-vue'
+import { mapState } from 'pinia'
+import { useAppStore } from '/@/store/modules/app'
 
 export default defineComponent({
   components: {
@@ -65,11 +67,14 @@ export default defineComponent({
     FileOutlined,
     // Editor
   },
-  data() {
-    return {
-      collapsed: ref<boolean>(false),
-      selectedKeys: ref<string[]>(['1'])
-    }
+  computed: {
+    ...mapState(useAppStore, [ 'collapsed' ])
+  },
+  setup () {
+    const appStore = useAppStore()
+    const selectedKeys = ref<string[]>(['1'])
+
+    return { appStore, selectedKeys }
   }
 })
 </script>
