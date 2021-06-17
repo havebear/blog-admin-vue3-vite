@@ -2,30 +2,37 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-06-16 16:36:15
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-16 17:13:49
+ * @LastEditTime: 2021-06-17 11:16:15
  * @Description:  Slider切换
 -->
 
 <template>
-  <div class="sider-trigger" @click.stop="appStore.targetCollapsed">
-    <double-right-outlined v-if="appStore.collapsed" />
+  <div class="sider-trigger" @click.stop="targetCollapsed">
+    <double-right-outlined v-if="collapsed" />
     <double-left-outlined v-else />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 import { DoubleRightOutlined, DoubleLeftOutlined } from '@ant-design/icons-vue'
+import { mapState, mapActions  } from 'pinia'
 import { useAppStore } from '/@/store/modules/app'
 
 export default defineComponent({
   name: 'SiderTrigger',
   components: { DoubleRightOutlined, DoubleLeftOutlined },
-  setup () {
-    const appStore = useAppStore()
-
-    return { appStore }
+  computed: {
+    ...mapState(useAppStore, ['collapsed'])
+  },
+  methods: {
+    ...mapActions(useAppStore, ['targetCollapsed'])
   }
+  // setup () {
+  //   const appStore = useAppStore()
+
+  //   return { appStore }
+  // }
 })
 </script>
 

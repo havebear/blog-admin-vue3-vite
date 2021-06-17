@@ -10,7 +10,7 @@
   <div>面包屑导航栏</div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
 
 }
