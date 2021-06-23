@@ -7,7 +7,7 @@
 -->
 
 <template>
-  <a-sub-menu v-if="menu.children && menu.children.length">
+  <a-sub-menu v-if="menu.children && menu.children.length" :key="menu.name">
     <template #title>
       <menu-item-content :menu="menu" />
     </template>

@@ -2,53 +2,25 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-06-09 16:09:26
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-23 14:33:05
+ * @LastEditTime: 2021-06-23 14:47:36
  * @Description:  菜单
 -->
 
 <template>
   <a-layout-sider :collapsed="collapsed" collapsible :trigger="null">
-    <a-menu theme="dark" v-model:selectedKeys="selectedKeys" mode="inline">
-      <sub-menu-item v-for="item in asyncRoutes[0].children" :key="item.path" :menu="item" />
-      {{ $route.path }}
-      <!-- <a-menu-item key="1">
-        <pie-chart-outlined />
-        <span>Option 1</span>
-      </a-menu-item>
-      <a-menu-item key="2">
-        <desktop-outlined />
-        <span>Option 2</span>
-      </a-menu-item>
-      <a-sub-menu key="sub1">
-        <template #title>
-          <span>
-            <user-outlined />
-            <span>User</span>
-          </span>
-        </template>
-        <a-menu-item key="3">Tom</a-menu-item>
-        <a-menu-item key="4">Bill</a-menu-item>
-        <a-menu-item key="5">Alex</a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="sub2">
-        <template #title>
-          <span>
-            <team-outlined />
-            <span>Team</span>
-          </span>
-        </template>
-        <a-menu-item key="6">Team 1</a-menu-item>
-        <a-menu-item key="8">Team 2</a-menu-item>
-      </a-sub-menu>
-      <a-menu-item key="9">
-        <file-outlined />
-        <span>File</span>
-      </a-menu-item> -->
+    <a-menu
+      v-model:selectedKeys="selectedKeys"
+      mode="inline"
+      theme="dark"
+      :sub-menu-open-delay="0.2"
+      @click="handleMenuClick">
+      <sub-menu-item v-for="item in asyncRoutes[0].children" :key="item.name" :menu="item" />
     </a-menu>
   </a-layout-sider>
 </template>
 
 <script lang="ts">
+import router from '/@/router'
 import SubMenuItem from './components/SubMenuItem.vue'
 import { defineComponent, ref } from 'vue'
 import { PieChartOutlined, DesktopOutlined, UserOutlined, TeamOutlined, FileOutlined } from '@ant-design/icons-vue'
@@ -73,8 +45,18 @@ export default defineComponent({
     const appStore = useAppStore()
     const selectedKeys = ref<string[]>(["1"])
 
-    return { appStore, selectedKeys, asyncRoutes }
-  },
+    /** 点击菜单 */
+    function handleMenuClick ({ key: name }) {
+      router.push({ name })
+    } 
+
+    return {
+      appStore,
+      selectedKeys,
+      asyncRoutes,
+      handleMenuClick
+    }
+  }
 })
 </script>
 
