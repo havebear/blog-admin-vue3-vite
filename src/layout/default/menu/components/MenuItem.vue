@@ -2,14 +2,14 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-06-17 17:18:50
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-17 17:45:18
+ * @LastEditTime: 2021-06-23 14:34:21
  * @Description:  
 -->
 
 <template>
-  <menu-item>
+  <a-menu-item :key="menu.name">
     <menu-item-content :menu="menu" />
-  </menu-item>
+  </a-menu-item>
 </template>
 
 <script lang="ts">

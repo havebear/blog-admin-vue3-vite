@@ -2,14 +2,15 @@
  * @Author: 616749285@qq.com
  * @Date: 2021-06-09 16:09:26
  * @LastEditors: 616749285@qq.com
- * @LastEditTime: 2021-06-17 17:53:44
+ * @LastEditTime: 2021-06-23 14:33:05
  * @Description:  菜单
 -->
 
 <template>
   <a-layout-sider :collapsed="collapsed" collapsible :trigger="null">
     <a-menu theme="dark" v-model:selectedKeys="selectedKeys" mode="inline">
-      <sub-menu-item v-for="item in asyncRoutes.children" :key="item.path" :menu="item" />
+      <sub-menu-item v-for="item in asyncRoutes[0].children" :key="item.path" :menu="item" />
+      {{ $route.path }}
       <!-- <a-menu-item key="1">
         <pie-chart-outlined />
         <span>Option 1</span>
@@ -50,13 +51,7 @@
 <script lang="ts">
 import SubMenuItem from './components/SubMenuItem.vue'
 import { defineComponent, ref } from 'vue'
-import {
-  PieChartOutlined,
-  DesktopOutlined,
-  UserOutlined,
-  TeamOutlined,
-  FileOutlined,
-} from '@ant-design/icons-vue'
+import { PieChartOutlined, DesktopOutlined, UserOutlined, TeamOutlined, FileOutlined } from '@ant-design/icons-vue'
 import { mapState } from 'pinia'
 import { useAppStore } from '/@/store/modules/app'
 import { asyncRoutes } from '/@/config/router'
