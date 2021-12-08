@@ -1,7 +1,7 @@
 <!--
- * @Author: 616749285@qq.com
+ * @Author: BGG
  * @Date: 2021-05-15 20:34:51
- * @LastEditors: 616749285@qq.com
+ * @LastEditors: BGG
  * @LastEditTime: 2021-05-15 22:01:45
  * @Description:  富文本编辑器
 -->

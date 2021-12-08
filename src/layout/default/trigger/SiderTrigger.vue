@@ -1,7 +1,7 @@
 <!--
- * @Author: 616749285@qq.com
+ * @Author: BGG
  * @Date: 2021-06-16 16:36:15
- * @LastEditors: 616749285@qq.com
+ * @LastEditors: BGG
  * @LastEditTime: 2021-06-17 11:16:15
  * @Description:  Slider切换
 -->
